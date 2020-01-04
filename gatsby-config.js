@@ -1,16 +1,29 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `floating.point`,
+    description: `floating.point platform is a blog archive about Computer Science and Web development.`,
+    footer: 'asda',
+    author: `@sikozonpc`,
+    // Used for social links in the root footer
+    social: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/tiago_taquelim`,
+      },
+      {
+        name: `GitHub`,
+        url: `https://github.com/sikozonpc`,
+      },
+    ],
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        path: `${__dirname}/src`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -21,10 +34,34 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#FFA500`,
+        theme_color: `#FFA500`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+              linkImagesToOriginal: false
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        basePath: `/blog`,
+        assetPath: `${__dirname}/src/assets`
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

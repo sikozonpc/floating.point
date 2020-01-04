@@ -1,0 +1,79 @@
+.courseContainer { 
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #3CA0E6;
+  padding: 20px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+  max-width: 500px;
+    
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  color: #ffffff;
+  font-family: 'Monsterrat';
+  font-family: Montserrat,sans-serif;
+  line-height: 1.1;
+  font-weight: 900;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+}
+
+.iconWrapper {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #222;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+  color: #61dafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.reactIcon {
+  color: #61dafb;
+  width: 28px;
+
+  @media only screen and (max-width: 450px) {
+    width: 24px;
+  }
+}
+
+.javascriptIcon {
+  color: #f7e018;
+  width: 28px;
+  margin-left: 4px;
+
+  @media only screen and (max-width: 450px) {
+    width: 24px;
+  }
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+
+    &:hover {
+    transform: scale(1);
+  }
+}
+
