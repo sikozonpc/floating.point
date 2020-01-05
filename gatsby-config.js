@@ -2,7 +2,6 @@ module.exports = {
   siteMetadata: {
     title: `floating.point`,
     description: `floating.point platform is a blog archive about Computer Science and Web development.`,
-    footer: 'asda',
     author: `@sikozonpc`,
     // Used for social links in the root footer
     social: [
@@ -38,7 +37,7 @@ module.exports = {
         background_color: `#FFA500`,
         theme_color: `#FFA500`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sharp`,
