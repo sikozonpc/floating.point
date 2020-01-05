@@ -1,0 +1,22 @@
+.container {
+	margin: 50px auto;
+	text-align: center;
+	h1 {
+		font-weight: 900;
+		font-size: 35px;
+		color: #555;
+		line-height: 50px;
+		font-family: "Open Sans", sans-serif;
+	}
+	.img {
+		max-width: 400px;
+		max-height: 250px;
+	}
+	hr {
+		width: 70%;
+		margin: auto;
+	}
+	p {
+		font-size: 22px;
+	}
+}

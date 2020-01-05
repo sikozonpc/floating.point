@@ -22,8 +22,6 @@ const Bio = () => {
   
   const hasAvatar = avatar && avatar.childImageSharp && avatar.childImageSharp.fixed
 
-  console.log(avatar.childImageSharp.fixed)
-
   return (
     <Flex css={css({ mb: 4, alignItems: `center` })}>
       {hasAvatar ? (

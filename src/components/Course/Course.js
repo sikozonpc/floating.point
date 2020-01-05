@@ -1,11 +1,12 @@
 import React from 'react'
 import classes from './course.module.scss'
 import { Styled, css } from 'theme-ui'
+import { Link } from 'gatsby'
 
 /**
  * Renders a course box with a clickable event to the course page
  */
-const Course = ({ slug, icon, topic, disabled }) => {
+const Course = ({ slug, icon, topic, disabled, link, ...rest }) => {
   const renderIcon = (icon) => {
     switch (icon) {
       case 'react':
@@ -19,6 +20,14 @@ const Course = ({ slug, icon, topic, disabled }) => {
   }
 
   return (
+    <Styled.a
+      as={Link}
+      css={css({
+        textDecoration: `none`,
+      })}
+      to={!disabled ? link : '/blog'}
+      {...rest}
+    >
     <div className={[classes.courseContainer, `${disabled ? classes.disabled : ''}`].join(' ')}>
       {icon && <span className={classes.iconWrapper}>
         <svg className={classes[`${topic}Icon`]} aria-hidden='true' focusable='false' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
@@ -27,6 +36,7 @@ const Course = ({ slug, icon, topic, disabled }) => {
       </span>}
       <h2 className={classes.title}>{slug}</h2>
     </div>
+    </Styled.a>
   )
 }
 
