@@ -1,0 +1,40 @@
+.li {
+  list-style: none;
+  
+  a {
+    
+  }
+}
+.section {
+  color: #FFA500;
+}
+
+.ul {
+  list-style: none;
+}
+.courseList {
+  list-style: none;
+  padding-left: 20px;
+}
+.sideLogo {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(9, 30, 66, 0.25);
+  width: 350px;
+  height: 250px;
+  background-color: #333333;
+  margin: 40px auto;
+}
+.title {
+  text-align: center;
+}

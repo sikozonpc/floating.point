@@ -6,7 +6,7 @@ const lightTextColor = `#232129`
 const darkBackground = `#232129`
 const white = `#fff`
 
-const darkHightlight = theme.color.primary
+const darkHightlight = `rgba(255, 229, 100, 0.2)`
 const lightHightlight = `rgba(255, 229, 100, 0.2)`
 
 const darkSecondaryColor = `rgba(255, 255, 255, 0.86)`
